@@ -144,13 +144,15 @@
                         <TextView
                             android:id="@+id/textView26"
                             android:layout_width="match_parent"
-                            android:layout_height="15dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/nota" />
 
                         <TextView
                             android:id="@+id/textView27"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/peso" />
                     </LinearLayout>
 
@@ -160,17 +162,21 @@
                         android:layout_weight="1"
                         android:orientation="vertical">
 
-                        <TextView
-                            android:id="@+id/textView22"
-                            android:layout_width="match_parent"
+                        <EditText
+                            android:id="@+id/editTextNumber6"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="TextView" />
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:inputType="number" />
 
-                        <TextView
-                            android:id="@+id/textView25"
-                            android:layout_width="match_parent"
+                        <EditText
+                            android:id="@+id/editTextNumber5"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="TextView" />
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:inputType="number" />
 
                     </LinearLayout>
 
@@ -180,7 +186,7 @@
                     android:id="@+id/button2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Button" />
+                    android:text="@string/cal" />
 
 
             </LinearLayout>

@@ -2,44 +2,44 @@ package com.example.laboratorio1_iot_20202132;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.EditText;
+import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
+import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class Main extends AppCompatActivity {
-
+public class ResultadoActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_resultado);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        Button buttonReplay = findViewById(R.id.buttonReplay);
 
-        EditText editTextNota1 =findViewById(R.id.editTextNumber);
-        EditText editTextNota2 =findViewById(R.id.editTextNumber2);
-        EditText editTextPeso1 =findViewById(R.id.editTextNumber3);
-        EditText editTextPeso2 =findViewById(R.id.editTextNumber4);
-        EditText EditTextNota = findViewById(R.id.editTextNumber6);
-        EditText EditTextPeso = findViewById(R.id.editTextNumber5);
+        String textResultado= getIntent().getStringExtra("resultado");
 
-        Double resultado;
+        TextView textResultado2 = findViewById(R.id.textResultado);
+        textResultado2.setText(textResultado);
 
 
-        Intent intent = new Intent(Main.this, ResultadoActivity.class);
-        // Pasamos el nombre del jugador a la siguiente pantalla
-        intent.putExtra("resultado", resultado);
-        startActivity(intent);
 
 
+        buttonReplay.setOnClickListener(v -> {
+            Intent intent = new Intent(ResultadoActivity.this, ResultadoActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+            finish();
+        });
 
     }
 }

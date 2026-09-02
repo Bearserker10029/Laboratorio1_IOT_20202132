@@ -8,4 +8,7 @@
     <string name="peso">Peso del Examen Final</string>
     <string name="not">Nota</string>
     <string name="pes">Peso</string>
+    <string name="cal">Calcular Nota mínima</string>
+
+    <string name="play_again">Volver a calcular</string>
 </resources>
