@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">Laboratorio1_IOT_20202132</string>
-
+    <string name="action_profile">PasaCurso</string>
+    <string name="conf">Configuración de Notas Anteriores</string>
+    <string name="marque">MARQUE PARA INCLUIR NOTAS ACTIVAS EN EL PROMEDIO</string>
+    <string name="para">Parámetros del Curso</string>
+    <string name="nota">Nota mínima para aprobar</string>
+    <string name="peso">Peso del Examen Final</string>
+    <string name="not">Nota</string>
+    <string name="pes">Peso</string>
 </resources>
